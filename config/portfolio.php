@@ -145,4 +145,92 @@ return [
             'video_url' => null,
         ],
     ],
+
+    /*
+    | Certificates: add entries here. Put images in public/images/certificates/
+    | Optional: 'url' — link to verify (LinkedIn Learning, Coursera, etc.)
+    | To add images: open certificate page → screenshot or download → save to public/images/certificates/ with the name below.
+    */
+    'certificates' => [
+        [
+            'title' => 'PHP: Object-Oriented Programming',
+            'description' => 'OOP principles for PHP: classes, inheritance, magic methods. By Kevin Skoglund.',
+            'image' => '/images/certificates/01-php-oop.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/b9fce512175047e20bcd97b962542092e85c10114694cd29da11aff38368ec52',
+        ],
+        [
+            'title' => 'Advanced PHP: Debugging Techniques',
+            'description' => 'Error levels, logging, Xdebug, Laravel Tinker, remote debugging with Monolog.',
+            'image' => '/images/certificates/02-php-debugging.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/482f014030f12cb3762d3823ad3571753f80a07403f95ecae6532db8d2362dd9',
+        ],
+        [
+            'title' => 'PHP Techniques: Pagination',
+            'description' => 'Paginating lists and database records in PHP, OOP approach. By Kevin Skoglund.',
+            'image' => '/images/certificates/03-php-pagination.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/7a8fd6443066cef2343d2ef587bc268b94c2712b814e215297cfebfd7fabed0c',
+        ],
+        [
+            'title' => 'Advance Your PHP Skills',
+            'description' => 'Deepen your core PHP knowledge by leveraging more of the built-in functionality and libraries. Discover how to use the provided data structure, iterators, interfaces, exceptions, and classes to get the job done.',
+            'image' => '/images/certificates/04-linkedin-learning.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/0a6884db740c97e2cf6117099e29420d0753b929004a85ec2bbfad6b0dc53617',
+        ],
+        [
+            'title' => 'PHP: User Authentication',
+            'description' => 'Best practices for auth in PHP: login/logout, passwords, HTTPS, securing tokens.',
+            'image' => '/images/certificates/05-php-user-auth.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/57161bc0f76e986719f35f8d3645272a163d3a0bb472e237559ab75af902c9a3',
+        ],
+        [
+            'title' => 'PHP: Creating Secure Websites',
+            'description' => 'Security for PHP apps: input filtering, output escaping, XSS and SQL injection defenses.',
+            'image' => '/images/certificates/06-php-secure-websites.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/654f542145f254817472959dde385799e9485dadb5cd946814e8aceefdeaa78f',
+        ],
+        [
+            'title' => 'PHP Techniques: Working with Files and Directories',
+            'description' => 'Reading/writing files, directory handling, permissions, file uploads. By Kevin Skoglund.',
+            'image' => '/images/certificates/07-php-files-directories.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/1f6df82064e34872edf3e26a0d09d9df0f45480762b5f34b9591ce8135d8eb45',
+        ],
+        [
+            'title' => 'Functional Programming with PHP',
+            'description' => 'First-class functions, array operations, filter/reduce, recursion. By Shaun Wassell.',
+            'image' => '/images/certificates/08-php-functional.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/9e8157304cfc7740839ece5063eec141ee523d2c84e151520b1f0c642afe68a4',
+        ],
+        [
+            'title' => 'PHP: Testing Legacy Applications',
+            'description' => 'Writing tests for legacy PHP codebases, refactoring test suites. By Chris Hartjes.',
+            'image' => '/images/certificates/09-php-testing-legacy.png',
+            'year' => '2026',
+            'issuer' => 'LinkedIn Learning',
+            'url' => 'https://www.linkedin.com/learning/certificates/15bc8db37746422d10f51fd9fab229c43079d02257dbd84b781e94dc8d553593',
+        ],
+        [
+            'title' => 'Master Full-Stack Web Development with Laravel & PHP',
+            'description' => 'Laravel from routing to auth, migrations, Eloquent, RESTful APIs, deployment. ~15 hours.',
+            'image' => '/images/certificates/10-coursera-laravel-php.png',
+            'year' => '2026',
+            'issuer' => 'Coursera / Board Infinity',
+            'url' => 'https://www.coursera.org/account/accomplishments/verify/ARNQ1N3GGQYE',
+        ],
+    ],
 ];

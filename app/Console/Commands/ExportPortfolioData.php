@@ -15,6 +15,7 @@ class ExportPortfolioData extends Command
         $data = [
             'profile' => config('portfolio.profile'),
             'works' => config('portfolio.works'),
+            'certificates' => config('portfolio.certificates'),
         ];
 
         $output = $this->option('output') ?? base_path('storage/app/portfolio.json');

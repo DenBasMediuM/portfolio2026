@@ -49,11 +49,45 @@ Edit `config/portfolio.php` and add an entry to the `works` array:
 
 Screenshots can be URLs or paths to files in `public/` (e.g. `public/images/works/...`).
 
+## Adding a certificate
+
+1. Put the certificate image in `public/images/certificates/` (e.g. `laravel-bootcamp.png`).
+2. In `config/portfolio.php`, the `certificates` array already has `image` paths. **Current expected filenames** (save screenshots from LinkedIn/Coursera with these names):
+   - `01-php-oop.png` — PHP: Object-Oriented Programming
+   - `02-php-debugging.png` — Advanced PHP: Debugging Techniques
+   - `03-php-pagination.png` — PHP Techniques: Pagination
+   - `04-linkedin-learning.png` — LinkedIn Learning (generic)
+   - `05-php-user-auth.png` — PHP: User Authentication
+   - `06-php-secure-websites.png` — PHP: Creating Secure Websites
+   - `07-php-files-directories.png` — PHP Techniques: Working with Files and Directories
+   - `08-php-functional.png` — Functional Programming with PHP
+   - `09-php-testing-legacy.png` — PHP: Testing Legacy Applications
+   - `10-coursera-laravel-php.png` — Master Full-Stack Web Development with Laravel & PHP
+
+To add a **new** certificate, add an entry to the `certificates` array:
+
+```php
+[
+    'title' => 'Laravel Bootcamp',
+    'description' => 'Completed Laravel Bootcamp course: routing, Eloquent, Blade, authentication.',
+    'image' => '/images/certificates/laravel-bootcamp.png',
+    'year' => '2024',
+    'issuer' => 'Laracasts',
+],
+```
+
+- `title` — name of the certificate/course (required).
+- `description` — short description (optional).
+- `image` — path from site root, e.g. `/images/certificates/name.png` (optional; if omitted, a placeholder is shown).
+- `year` — year received (optional).
+- `issuer` — issuing organization (optional).
+
 ## Routes
 
 - `/` — Home (hero, about, skills, experience, education, works preview, contact)
 - `/works` — List of all works
 - `/works/{slug}` — Single work (description, video, screenshots)
+- `/certificates` — Certificates (image + description per item)
 
 ## Build for production
 

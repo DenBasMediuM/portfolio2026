@@ -4,6 +4,7 @@ const routes = [
     { path: '/', name: 'home', component: () => import('../pages/Home.vue'), meta: { title: 'Home' } },
     { path: '/works', name: 'works', component: () => import('../pages/WorksIndex.vue'), meta: { title: 'Works' } },
     { path: '/works/:slug', name: 'work', component: () => import('../pages/WorkShow.vue'), meta: { title: 'Work' } },
+    { path: '/certificates', name: 'certificates', component: () => import('../pages/Certificates.vue'), meta: { title: 'Certificates' } },
 ];
 
 const base = typeof import.meta.env?.BASE_URL === 'string' ? import.meta.env.BASE_URL : '/';

@@ -33,6 +33,7 @@ function closeMenu() {
                 <RouterLink to="/#skills" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Skills</RouterLink>
                 <RouterLink to="/#experience" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Experience</RouterLink>
                 <RouterLink to="/works" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Works</RouterLink>
+                <RouterLink to="/certificates" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Certificates</RouterLink>
                 <RouterLink to="/#contact" class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">Contact</RouterLink>
             </div>
 
@@ -72,6 +73,7 @@ function closeMenu() {
                     <RouterLink to="/#skills" class="py-3 px-3 rounded-lg text-zinc-300 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors min-h-[44px] flex items-center" @click="closeMenu">Skills</RouterLink>
                     <RouterLink to="/#experience" class="py-3 px-3 rounded-lg text-zinc-300 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors min-h-[44px] flex items-center" @click="closeMenu">Experience</RouterLink>
                     <RouterLink to="/works" class="py-3 px-3 rounded-lg text-zinc-300 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors min-h-[44px] flex items-center" @click="closeMenu">Works</RouterLink>
+                    <RouterLink to="/certificates" class="py-3 px-3 rounded-lg text-zinc-300 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors min-h-[44px] flex items-center" @click="closeMenu">Certificates</RouterLink>
                     <RouterLink to="/#contact" class="py-3 px-3 rounded-lg text-zinc-300 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors min-h-[44px] flex items-center" @click="closeMenu">Contact</RouterLink>
                 </div>
             </div>

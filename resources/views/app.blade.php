@@ -8,11 +8,15 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=space-grotesk:400,500,600,700|jetbrains-mono:400,500" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script>
-        window.__PORTFOLIO__ = @json([
+    @php
+        $portfolioData = [
             'profile' => config('portfolio.profile'),
             'works' => config('portfolio.works'),
-        ]);
+            'certificates' => config('portfolio.certificates'),
+        ];
+    @endphp
+    <script>
+        window.__PORTFOLIO__ = @json($portfolioData);
     </script>
 </head>
 <body class="antialiased bg-zinc-950 text-zinc-100 min-h-screen">
