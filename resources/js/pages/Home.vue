@@ -3,55 +3,69 @@ import { RouterLink } from 'vue-router';
 
 const profile = window.__PORTFOLIO__.profile;
 const works = window.__PORTFOLIO__.works;
+const base = (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) ? import.meta.env.BASE_URL : '';
 </script>
 
 <template>
     <div>
         <!-- Hero -->
-        <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+        <section class="relative min-h-[90vh] min-h-[100dvh] flex flex-col md:flex-row md:items-center justify-center overflow-hidden pt-16 md:pt-20 pb-12 md:pb-0">
             <div class="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
             <div class="absolute inset-0 bg-[linear-gradient(rgba(251,191,36,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(251,191,36,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-amber-500/5 blur-3xl" />
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-amber-500/5 blur-3xl pointer-events-none" />
 
-            <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-                <p class="text-amber-400/90 text-sm font-medium tracking-widest uppercase mb-4">
-                    {{ profile.title_alt }}
-                </p>
-                <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-100 mb-6">
-                    {{ profile.name }}
-                </h1>
-                <p class="text-xl text-zinc-400 mb-8 max-w-2xl mx-auto">
-                    {{ profile.summary }}
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a
-                        :href="`mailto:${profile.email}`"
-                        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-500 text-zinc-950 font-semibold hover:bg-amber-400 transition-colors"
-                    >
-                        Get in touch
-                    </a>
-                    <RouterLink
-                        to="/works"
-                        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-zinc-600 text-zinc-300 hover:border-amber-500/50 hover:text-amber-400 transition-colors"
-                    >
-                        View works
-                    </RouterLink>
+            <div class="relative z-10 w-full max-w-4xl mx-auto px-4 md:px-6 flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-16">
+                <!-- Text block -->
+                <div class="flex-1 text-center md:text-left order-2 md:order-1">
+                    <p class="text-amber-400/90 text-xs sm:text-sm font-medium tracking-widest uppercase mb-3 md:mb-4">
+                        {{ profile.title_alt }}
+                    </p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100 mb-4 md:mb-6">
+                        {{ profile.name }}
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-zinc-400 mb-6 md:mb-8 max-w-2xl md:mx-0 mx-auto">
+                        {{ profile.summary }}
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+                        <a
+                            :href="`mailto:${profile.email}`"
+                            class="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-amber-500 text-zinc-950 font-semibold hover:bg-amber-400 transition-colors text-sm sm:text-base"
+                        >
+                            Get in touch
+                        </a>
+                        <RouterLink
+                            to="/works"
+                            class="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 sm:px-6 py-3 rounded-lg border border-zinc-600 text-zinc-300 hover:border-amber-500/50 hover:text-amber-400 transition-colors text-sm sm:text-base"
+                        >
+                            View works
+                        </RouterLink>
+                    </div>
+                    <p class="mt-6 md:mt-8 text-zinc-500 text-xs sm:text-sm flex items-center justify-center md:justify-start gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                        {{ profile.location }}
+                    </p>
                 </div>
-                <p class="mt-8 text-zinc-500 text-sm flex items-center justify-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    {{ profile.location }}
-                </p>
+                <!-- Photo: crop via object-position to focus on person -->
+                <div class="relative z-10 flex-shrink-0 order-1 md:order-2 mb-8 md:mb-0">
+                    <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto md:mx-0 rounded-2xl overflow-hidden border border-zinc-700/50 shadow-xl shadow-black/30 ring-1 ring-zinc-700/50">
+                        <img
+                            :src="`${base}images/hero.png`"
+                            alt="Denis Isaev"
+                            class="w-full h-full object-cover object-[center_22%]"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- About -->
-        <section id="about" class="py-24 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section id="about" class="py-12 sm:py-16 md:py-24 scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4 md:mb-6 flex items-center gap-3">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     About
                 </h2>
-                <p class="text-zinc-400 text-lg leading-relaxed">{{ profile.summary }}</p>
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed">{{ profile.summary }}</p>
                 <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                     <div class="flex items-center gap-3 text-zinc-400">
                         <span class="text-amber-500">Location</span>
@@ -74,10 +88,10 @@ const works = window.__PORTFOLIO__.works;
         </section>
 
         <!-- Skills -->
-        <section id="skills" class="py-24 bg-zinc-900/50 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section id="skills" class="py-12 sm:py-16 md:py-24 bg-zinc-900/50 scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4 md:mb-6 flex items-center gap-3">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     Skills
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -119,10 +133,10 @@ const works = window.__PORTFOLIO__.works;
         </section>
 
         <!-- Experience -->
-        <section id="experience" class="py-24 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-10 flex items-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section id="experience" class="py-12 sm:py-16 md:py-24 scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-6 md:mb-10 flex items-center gap-3">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     Experience
                 </h2>
                 <div class="space-y-10">
@@ -133,7 +147,7 @@ const works = window.__PORTFOLIO__.works;
                     >
                         <span class="absolute left-0 top-0 -translate-x-1/2 w-3 h-3 rounded-full bg-amber-500/80 group-hover:bg-amber-400 transition-colors" />
                         <div class="flex flex-wrap items-baseline gap-2">
-                            <h3 class="text-lg font-semibold text-zinc-100">{{ job.role }}</h3>
+                            <h3 class="text-base sm:text-lg font-semibold text-zinc-100">{{ job.role }}</h3>
                             <template v-if="job.company">
                                 <span class="text-zinc-500">at</span>
                                 <a
@@ -165,10 +179,10 @@ const works = window.__PORTFOLIO__.works;
         </section>
 
         <!-- Education -->
-        <section class="py-24 bg-zinc-900/50">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section class="py-12 sm:py-16 md:py-24 bg-zinc-900/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4 md:mb-6 flex items-center gap-3">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     Education
                 </h2>
                 <div class="relative pl-8 border-l border-zinc-800">
@@ -189,10 +203,10 @@ const works = window.__PORTFOLIO__.works;
         </section>
 
         <!-- Works preview -->
-        <section id="works" class="py-24 scroll-mt-24">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section id="works" class="py-12 sm:py-16 md:py-24 scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4 md:mb-6 flex items-center gap-3">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     Selected works
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -200,7 +214,7 @@ const works = window.__PORTFOLIO__.works;
                         v-for="work in works"
                         :key="work.slug"
                         :to="`/works/${work.slug}`"
-                        class="group block p-6 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300"
+                        class="group block p-4 sm:p-6 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300 min-h-[44px] flex flex-col justify-center"
                     >
                         <h3 class="font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">{{ work.title }}</h3>
                         <p class="text-sm text-zinc-500 mt-1">{{ work.subtitle }}</p>
@@ -224,24 +238,24 @@ const works = window.__PORTFOLIO__.works;
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="py-24 bg-zinc-900/50 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-zinc-100 mb-4 flex items-center justify-center gap-3">
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+        <section id="contact" class="py-12 sm:py-16 md:py-24 bg-zinc-900/50 scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4 flex items-center justify-center gap-3 flex-wrap">
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                     Contact
-                    <span class="w-10 h-0.5 bg-amber-500 rounded" />
+                    <span class="w-8 sm:w-10 h-0.5 bg-amber-500 rounded shrink-0" />
                 </h2>
-                <p class="text-zinc-400 mb-8">Let's build something together.</p>
-                <div class="flex flex-wrap justify-center gap-6">
+                <p class="text-zinc-400 mb-6 md:mb-8 text-sm sm:text-base">Let's build something together.</p>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">
                     <a
                         :href="`mailto:${profile.email}`"
-                        class="px-6 py-3 rounded-lg bg-amber-500 text-zinc-950 font-semibold hover:bg-amber-400 transition-colors"
+                        class="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-amber-500 text-zinc-950 font-semibold hover:bg-amber-400 transition-colors text-sm sm:text-base break-all"
                     >
                         {{ profile.email }}
                     </a>
                     <a
                         :href="`tel:${profile.phone}`"
-                        class="px-6 py-3 rounded-lg border border-zinc-600 text-zinc-300 hover:border-amber-500/50 hover:text-amber-400 transition-colors"
+                        class="inline-flex items-center justify-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg border border-zinc-600 text-zinc-300 hover:border-amber-500/50 hover:text-amber-400 transition-colors text-sm sm:text-base"
                     >
                         {{ profile.phone }}
                     </a>
