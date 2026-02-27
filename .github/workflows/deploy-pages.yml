@@ -1,5 +1,5 @@
 # Deploy portfolio to GitHub Pages
-# Repo Settings → Pages → Source: Deploy from a branch → Branch: gh-pages, / (root)
+# Before first run: Repo → Settings → Pages → Source: GitHub Actions
 
 name: Deploy to GitHub Pages
 
