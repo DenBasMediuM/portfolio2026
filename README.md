@@ -43,8 +43,20 @@ Edit `config/portfolio.php` and add an entry to the `works` array:
     'screenshots' => [
         ['src' => '/images/work1.png', 'alt' => 'Main screen'],
     ],
-    'video_url' => 'https://youtube.com/embed/...',  // optional
+    'video_url' => null,  // optional: YouTube embed or Google Drive (see below)
 ],
+```
+
+**Видео в работе (`video_url`):**
+
+- **YouTube:** скопируй ссылку «Встроить» — в ней уже формат `https://www.youtube.com/embed/VIDEO_ID`. Либо из ссылки вида `youtube.com/watch?v=VIDEO_ID` подставь в `https://www.youtube.com/embed/VIDEO_ID`.
+- **Google Drive:**
+  1. Залей видео на Google Drive.
+  2. ПКМ по файлу → **Поделиться** → **Доступ по ссылке** → «Все, у кого есть ссылка».
+  3. Скопируй ссылку вида `https://drive.google.com/file/d/ABC123xyz/view?usp=sharing`.
+  4. Для вставки в портфолио замени в ней **`/view`** на **`/preview`** и укажи в конфиге:
+     `'video_url' => 'https://drive.google.com/file/d/ABC123xyz/preview'`
+     (подставь свой `ABC123xyz` — ID файла из ссылки).
 ```
 
 Screenshots can be URLs or paths to files in `public/` (e.g. `public/images/works/...`).

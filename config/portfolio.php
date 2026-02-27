@@ -138,11 +138,11 @@ return [
             'tech' => ['Laravel', 'Vue.js', 'Inertia.js', 'MySQL', 'PWA', 'Chart.js'],
             'url' => null,
             'screenshots' => [
-                ['src' => 'https://placehold.co/1200x800/1e293b/94a3b8?text=Dashboard', 'alt' => 'Dashboard'],
-                ['src' => 'https://placehold.co/1200x800/1e293b/94a3b8?text=Orders', 'alt' => 'Orders list'],
-                ['src' => 'https://placehold.co/1200x800/1e293b/94a3b8?text=Reports', 'alt' => 'Reports'],
+                ['src' => '/works/crm1.jpg', 'alt' => 'Dashboard'],
+                ['src' => '/works/crm2.jpg', 'alt' => 'Orders list'],
+                ['src' => '/works/crm3.jpg', 'alt' => 'Reports'],
             ],
-            'video_url' => null,
+            'video_url' => 'https://drive.google.com/file/d/1tAfrDx5e8qrIcbDZbBSYPFmpg5MONzVY/preview',
         ],
     ],
 
