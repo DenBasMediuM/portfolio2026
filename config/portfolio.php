@@ -144,6 +144,21 @@ return [
             ],
             'video_url' => 'https://drive.google.com/file/d/1tAfrDx5e8qrIcbDZbBSYPFmpg5MONzVY/preview',
         ],
+        [
+            'slug' => 'seo-ranking-checker',
+            'title' => 'SEO Ranking Checker',
+            'subtitle' => 'Laravel, Selenium, PHP',
+            'year' => '2026',
+            'description' => 'SEO Ranking Checker is a tool that allows you to check the ranking of a website in search engines.',
+            'tech' => ['Laravel', 'Selenium', 'PHP'],
+            'url' => null,
+            'screenshots' => [
+                ['src' => '/works/seo-ranking1.jpg', 'alt' => 'Dashboard'],
+                ['src' => '/works/seo-ranking2.jpg', 'alt' => 'Orders list'],
+                ['src' => '/works/seo-ranking3.jpg', 'alt' => 'Reports'],
+            ],
+            'video_url' => 'https://drive.google.com/file/d/1Sb_j1hg08FHxE4LctvBCsiePndiRVYXa/preview',
+        ],
     ],
 
     /*
