@@ -247,5 +247,13 @@ return [
             'issuer' => 'Coursera / Board Infinity',
             'url' => 'https://www.coursera.org/account/accomplishments/verify/ARNQ1N3GGQYE',
         ],
+        [
+            'title' => 'Back-End Development with .NET',
+            'description' => 'This course focuses on back-end development using the .NET framework. It equips you with the essential skills to build, manage, and optimize server-side applications efficiently',
+            'image' => '/images/certificates/11-coursera-dotNet.png',
+            'year' => '2026',
+            'issuer' => 'Microsoft',
+            'url' => 'https://coursera-certificate-images.s3.amazonaws.com/AZR8EMOSQ51Q',
+        ],
     ],
 ];
